@@ -29,6 +29,6 @@ class Solution:
         if root is None:
             return
         thisnode = root.left
-        self.left = self.invertTree(root.right)
-        self.right = self.invertTree(thisnode)
+        root.left = self.invertTree(root.right)
+        root.right = self.invertTree(thisnode)
         return root
