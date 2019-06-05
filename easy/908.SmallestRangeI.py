@@ -44,5 +44,6 @@ class Solution:
         cha = max(A)-K-(min(A)+K)
         if cha>=0:
             return cha
+
         else:
             return 0
