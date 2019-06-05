@@ -20,6 +20,14 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+# 深度优先搜索
 class Solution:
     def isUnivalTree(self, root: TreeNode) -> bool:
+        val = []
+        def dsf(node):
+            if node:
+                val.append(node.val)
+                dsf(node.right)
+                dsf(node.left)
+        dsf(root)
+        return len(set(val))==1
