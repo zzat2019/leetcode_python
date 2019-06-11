@@ -18,5 +18,3 @@ def commonChars(A):
 
     return result
 
-
-commonChars(["bella","label","roller"])
